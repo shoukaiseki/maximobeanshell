@@ -48,12 +48,13 @@ DESCRIPTION:函数后触发
 函数:init
 描述:init方法
 
-![image](https://git.oschina.net/shoukaiseki/maximobeanshell/blob/master/image/bshtcf001.png)
+![image](http://git.oschina.net/shoukaiseki/maximobeanshell/raw/master/image/bshtcf001.png)
 
 
----记录1---{{{2
+---记录2---{{{2
 类名: ActionCustomClass
 描述:操作绑定类
 
 无函数子表
 
+![image](http://git.oschina.net/shoukaiseki/maximobeanshell/raw/master/image/bshtcf002.png)
