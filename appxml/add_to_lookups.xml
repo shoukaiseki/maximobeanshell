@@ -1,0 +1,7 @@
+  <table id="bshtcf" inputmode="readonly" selectmode="single"> 
+    <tablebody displayrowsperpage="20" filterable="true" filterexpanded="true" id="bshtcf_lookup_tablebody"> 
+      <tablecol dataattribute="class" id="bshtcf_results_showlist_column1" inputmode="readonly" mxevent="selectrecord"/>  
+      <tablecol dataattribute="function" id="bshtcf_results_showlist_column2" inputmode="readonly" mxevent="selectrecord"/>  
+      <tablecol dataattribute="DESCRIPTION" id="bshtcf_results_showlist_column3" mxevent="selectrecord"/> 
+    </tablebody> 
+  </table>  

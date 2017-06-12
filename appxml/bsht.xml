@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<presentation id="bsht" mboname="BEANSHELLTRIGGER" resultstableid="results_showlist" version="6.0.0"> 
+  <page id="mainrec"> 
+    <include id="pageHeader"/>  
+    <clientarea id="clientarea"> 
+      <tabgroup id="maintabs" style="form"> 
+        <tab default="true" id="results" label="列表" type="list"> 
+          <menubar event="search" id="actiontoolbar1" sourcemethod="getAppSearchOptions"/>  
+          <table id="results_showlist" inputmode="readonly" label="列表" mboname="BEANSHELLTRIGGER" selectmode="multiple"> 
+            <tablebody displayrowsperpage="20" filterable="true" filterexpanded="true" id="results_showlist_tablebody"> 
+              <tablecol dataattribute="BEANSHELLTRIGGERID" filterable="false" id="results_showlist_column_select" mxevent="toggleselectrow" mxevent_desc="Select Row {0}" sortable="false" type="event"/>  
+              <tablecol dataattribute="orgid" id="1401939154723" label="组织" mxevent="selectrecord" mxevent_desc="转到 %1"/>  
+              <tablecol dataattribute="BEANSHELLTRIGGERID" id="results_showlist_column_link" label="ID" mxevent="selectrecord" mxevent_desc="Go To %1" type="link" usefieldsizegroup="false"/>  
+              <tablecol dataattribute="appname" id="results_showlist_column1" lookup="maxapps" mxevent="selectrecord" type="link"/>  
+              <tablecol dataattribute="class" id="1369723397630" lookup="bshtcf" mxevent="selectrecord" type="link"/>  
+              <tablecol dataattribute="function" id="1369723399902" lookup="bshtcf" mxevent="selectrecord" type="link"/>  
+              <tablecol dataattribute="when" id="1369723403353" lookup="valuelist" mxevent="selectrecord" type="link"/>  
+              <tablecol dataattribute="TABLEFIELD" id="1369723403354" mxevent="selectrecord" type="link"/>  
+              <tablecol dataattribute="Sequence" id="1369723489385" mxevent="selectrecord" type="link"/>  
+              <tablecol dataattribute="DESCRIPTION" id="results_showlist_column2"/>  
+              <tablecol id="1401938004079"> 
+                <textbox dataattribute="siteid" id="1401938012325" inputmode="READONLY" lookup="site" smartfilloff="true"/> 
+              </tablecol>  
+              <tablecol filterable="false" id="results_bookmark" mxevent="BOOKMARK" mxevent_desc="Add to Bookmarks" mxevent_icon="btn_addtobookmarks.gif" sortable="false" type="event"/> 
+            </tablebody> 
+          </table> 
+        </tab>  
+        <tab id="main" label="详细信息" type="insert"> 
+          <section id="maintab_section"> 
+            <sectionrow id="section_xml_row_1"> 
+              <sectioncol id="section_xml_col_1"> 
+                <section id="section_xml_bubunn_2"> 
+                  <textbox dataattribute="APPNAME" id="maintab_attr9" lookup="maxapps"/>  
+                  <textbox applink="bshtcf" dataattribute="class" id="maintab_attr4" lookup="bshtcf" menutype="NORMAL"/>  
+                  <textbox dataattribute="FUNCTION" id="maintab_attr5" lookup="bshtcf"/>  
+                  <textbox dataattribute="WHEN" id="maintab_attr6" lookup="valuelist"/>  
+                  <textbox dataattribute="TABLEFIELD" id="maintab_attr7" label="表字段/操作名称"/> 
+                </section> 
+              </sectioncol>  
+              <sectioncol id="section_xml_col_3"> 
+                <section id="1369036219391"> 
+                  <textbox dataattribute="BEANSHELLTRIGGERID" label="唯一ID" id="maintab_attr1" inputmode="readonly"/>  
+                  <textbox dataattribute="version" id="maintab_attr10" inputmode="readonly"/>  
+                  <textbox dataattribute="SEQUENCE" id="maintab_attr8"/>  
+                  <textbox dataattribute="ORGID" id="1402037931910" label="组织" lookup="ORG" size="30" smartfilloff="true"/>  
+                  <textbox dataattribute="siteid" id="1401938106557" lookup="site" size="30" smartfilloff="true"/>  
+                  <multilinetextbox dataattribute="DESCRIPTION" id="1369724224621"/> 
+                </section> 
+              </sectioncol> 
+            </sectionrow> 
+          </section>  
+          <section id="1111111111" label="源代码"> 
+            <multilinetextbox columns="100" dataattribute="source" hidelabel="true" id="1369724160346" rows="10"/> 
+          </section> 
+        </tab>  
+        <tab id="1375424837150" label="bsh说明"> 
+          <section id="1369665072731" inputmode="readonly"> 
+            <richtextviewer dataattribute="BEANSHELLCLASSFUNCTION.DESCRIPTION_LONGDESCRIPTION" height="300" hidelabel="true" id="1375424950297" width="720"/> 
+          </section> 
+        </tab>  
+        <tab id="log" label="修改日志"> 
+          <section id="1369834752895" inputmode="readonly"> 
+            <sectionrow id="1369834752901"> 
+              <sectioncol id="1369834752907"> 
+                <section id="1369834752913"> 
+                  <textbox dataattribute="APPNAME" id="1369834752918" lookup="maxapps"/>  
+                  <textbox applink="bshtcf" dataattribute="class" id="1369834752923" lookup="bshtcf" menutype="NORMAL"/> 
+                </section> 
+              </sectioncol>  
+              <sectioncol id="1369834752917"> 
+                <section id="1369834752943"> 
+                  <textbox dataattribute="FUNCTION" id="1369834752929" lookup="bshtcf"/>  
+                  <textbox dataattribute="WHEN" id="1369834752934" lookup="valuelist"/> 
+                </section> 
+              </sectioncol>  
+              <sectioncol id="1369834753917"> 
+                <section id="1369834753943"> 
+                  <textbox dataattribute="TABLEFIELD" id="1369834752942"/>  
+                  <textbox dataattribute="version" id="1369834762942"/> 
+                </section> 
+              </sectioncol>  
+              <sectioncol id="1369834752947"> 
+                <section id="1369834752953"> 
+                  <textbox dataattribute="BEANSHELLTRIGGERID" id="1369834752958" inputmode="readonly" label="ID"/>  
+                  <textbox dataattribute="SEQUENCE" id="1369834752963"/> 
+                </section> 
+              </sectioncol> 
+            </sectionrow> 
+          </section>  
+          <table datasrc="BEANSHELLTRIGGERLOG" id="1369833956416" inputmode="readonly" label="日志" mboname="BEANSHELLTRIGGERLOG" orderby="DATETIME desc" selectmode="multiple"> 
+            <tablebody displayrowsperpage="20" filterable="true" filterexpanded="true" id="1369833956427"> 
+              <tablecol filterable="false" id="1369833956433" mxevent="toggledetailstate" sortable="false" type="event"/>  
+              <tablecol dataattribute="BeanShellTriggerlogID" id="1369834649610" label="ID"/>  
+              <tablecol dataattribute="BEANSHELLTRIGGERID" id="1369833956438" label="bshtID"/>  
+              <tablecol dataattribute="appname" id="1369833956443" lookup="maxapps"/>  
+              <tablecol dataattribute="class" id="1369833956448" lookup="bshtcf"/>  
+              <tablecol dataattribute="function" id="1369833956452" lookup="bshtcf"/>  
+              <tablecol dataattribute="when" id="1369833956457" lookup="valuelist"/>  
+              <tablecol dataattribute="TABLEFIELD" id="1369833956462"/>  
+              <tablecol dataattribute="Sequence" id="1369833956466"/>  
+              <tablecol dataattribute="version" id="1369933956466"/>  
+              <tablecol dataattribute="DESCRIPTION" id="1369833956472" inputmode="readonly"> 
+                <textbox id="1369836941340" lookup="LONGDESC"/> 
+              </tablecol>  
+              <tablecol dataattribute="datetime" id="1369834630230"/>  
+              <tablecol dataattribute="personid" id="1369834628616"/>  
+              <tablecol dataattribute="displayname" id="1369834624346"/>  
+              <tablecol dataattribute="ClientHost" id="1369834640620"/>  
+              <tablecol dataattribute="changed" id="1369834616848"/> 
+            </tablebody>  
+            <tabledetails id="resultsTabledetails"> 
+              <section id="resultsTable_section_1" label="源代码"> 
+                <textbox dataattribute="DESCRIPTION" id="1369835632485" inputmode="readonly" lookup="LONGDESC"/>  
+                <multilinetextbox columns="100" dataattribute="source" hidelabel="true" id="s1369724160346" inputmode="readonly" rows="10"/> 
+              </section> 
+            </tabledetails> 
+          </table> 
+        </tab> 
+      </tabgroup> 
+    </clientarea>  
+    <include id="pageFooter"/> 
+  </page>  
+  <dialog beanclass="psdi.webclient.system.beans.ViewBookmarksBean" id="searchbook" label="我的书签" mboname="BEANSHELLTRIGGER"> 
+    <table id="bookmarks_table" inputmode="readonly" selectmode="single"> 
+      <tablebody displayrowsperpage="20" filterable="true" id="bookmarks_table_tablebody"> 
+        <tablecol dataattribute="BEANSHELLTRIGGERID" id="bookmarks_tablecolumn_1" mxevent="selectrecord" type="link"/>  
+        <tablecol dataattribute="description" id="bookmarks_tablecolumn_2"/>  
+        <tablecol filterable="false" id="bookmarks_tablecolumn_3" mxevent="instantdelete" mxevent_desc="Delete" mxevent_icon="btn_delete.gif" sortable="false" type="event"/> 
+      </tablebody> 
+    </table>  
+    <buttongroup id="bookmarks_2"> 
+      <pushbutton default="true" id="bookmarks_2_1" label="确定" mxevent="dialogok"/> 
+    </buttongroup> 
+  </dialog>  
+  <dialog beanclass="psdi.webclient.system.beans.QbeBean" id="searchmore" inputmode="query" label="高级搜索"> 
+    <section id="searchmore_1"> 
+      <textbox dataattribute="BEANSHELLTRIGGERID" id="searchmore_attr1"/>  
+      <textbox dataattribute="DESCRIPTION" id="searchmore_attr2"/>  
+      <textbox dataattribute="SOURCE" id="searchmore_attr3"/>  
+      <textbox dataattribute="TYPE" id="searchmore_attr4"/>  
+      <textbox dataattribute="FUNCTION" id="searchmore_attr5"/>  
+      <textbox dataattribute="WHEN" id="searchmore_attr6"/>  
+      <checkbox dataattribute="HASLD" id="searchmore_attr7"/>  
+      <textbox dataattribute="DESCRIPTION_LONGDESCRIPTION" id="searchmore_attr8"/>  
+      <textbox dataattribute="APPNAME" id="searchmore_attr9"/> 
+    </section>  
+    <buttongroup id="searchmore_buttongroup"> 
+      <pushbutton default="true" id="searchmore_buttongroup_1" label="查找" mxevent="dialogok"/>  
+      <pushbutton id="qbe_restoreappdefault_button" label="恢复应用程序缺省值" mxevent="qbeclear"/>  
+      <pushbutton id="qbe_revisebutton" label="修订" menutype="SEARCHMOREREVISE" targetid="searchmore"/>  
+      <pushbutton id="searchmore_buttongroup_3" label="取消" mxevent="qbecancel"/> 
+    </buttongroup> 
+  </dialog> 
+</presentation>
+
