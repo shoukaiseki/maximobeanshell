@@ -18,6 +18,7 @@ DISPVALUE:org.shoukaiseki.workflow.ActionAutoBeanShell
 ![image](http://git.oschina.net/shoukaiseki/maximobeanshell/raw/master/image/action001.png)
 
 然后在bsht(类在对应应用触发BeanShell脚本)中添加脚本记录
+```
 CLASS:ActionCustomClass
 TABLEFIELD:TESTBSH_001
 DESCRIPTION:是否新建?
@@ -26,6 +27,7 @@ if(!StringExpand.binarySearch(new String[]{"新建","等待批准"},absMbo.getSt
 	return new MXApplicationException("#","只有状态为新建,等待批准才能发送工作流");
 }
 absMbo.setValue("STATUS","状态1",11);
+```
 
 说明:
 org.shoukaiseki.workflow.ActionAutoBeanShell 操作脚本触发类中只对 CLASS:ActionCustomClass 和 TABLEFIELD 进行判断
@@ -53,6 +55,7 @@ DISPVALUE:org.shoukaiseki.workflow.ActionAutoBeanShell
 ![image](http://git.oschina.net/shoukaiseki/maximobeanshell/raw/master/image/action002.png)
 
 然后在bsht(类在对应应用触发BeanShell脚本)中添加脚本记录
+```
 CLASS:ActionCustomClass
 TABLEFIELD:TESTBSH_002
 DESCRIPTION:是否新建?
@@ -63,6 +66,7 @@ if(StringExpand.binarySearch(new String[]{"状态1"},absMbo.getString("STATUS"))
 absMbo.setValue("STATUS","状态2",11L);
 absMbo.setValue("ALN01",absMbo.getUserInfo().getPersonId(),11L);
 absMbo.setValue("ALN02", MXServer.getMXServer().getDate(),11L);
+```
 
 说明:
 MXServer.getMXServer().getDate() 为取数据库时间
@@ -74,6 +78,10 @@ MXServer.getMXServer().getDate() 为取数据库时间
 填写好name字段再发送
 ![image](http://git.oschina.net/shoukaiseki/maximobeanshell/raw/master/image/testbshtapp005.png)
 ![image](http://git.oschina.net/shoukaiseki/maximobeanshell/raw/master/image/testbshtapp006.png)
+
+
+---演示1,2流程总览---{{{1
+![image](http://git.oschina.net/shoukaiseki/maximobeanshell/raw/master/image/testbsh.png)
 
 
 
